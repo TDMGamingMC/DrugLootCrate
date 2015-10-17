@@ -1,0 +1,6 @@
+name: DrugLootCrate
+version: 1.12.0
+api: 1.12.0
+author: CavinMiana
+main: CavinMiana\DrugLootCrate\Main
+description: You tap a chest with a slimeball(CrateKey) and you get a random drug.
