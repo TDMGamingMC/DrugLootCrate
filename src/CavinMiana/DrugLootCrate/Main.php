@@ -10,7 +10,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\entity\Effect;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\tile\Tile;
-use pocketmine\tile\Chest;
+use pocketmine\tile\Sponge;
 use pocketmine\event\inventory\InventoryOpenEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\Item;
@@ -46,7 +46,7 @@ public function onBlockPlaceEvent(BlockPlaceEvent $ev) {
 			$event->setCancelled(true);
 		}
 		if ($ev->isCancelled()) return;
-		if ($bl->getId() != Block::CHEST || $bl->getSide(Vector3::SIDE_DOWN)->getId() != Block::SPONGE) return;
+		if ($bl->getId() != Block::SPONGE || $bl->getSide(Vector3::SIDE_DOWN)->getId() != Block::SPONGE) return;
 		$ev->getPlayer()->sendMessage("Placed Drug Crate...");
 	}
 		public function onInventoryOpenEvent(InventoryOpenEvent $ev) {
